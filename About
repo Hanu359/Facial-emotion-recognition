@@ -1,0 +1,89 @@
+# Face Expression Recognition using Convolutional Neural Networks (CNN)
+
+This repository contains the code for building a Convolutional Neural Network (CNN) model to recognize facial expressions from images. The model is trained to classify facial expressions into one of seven categories: anger, disgust, fear, happiness, sadness, surprise, and neutral.
+
+## Dataset
+
+The model is trained on the [Face Expression Recognition Dataset](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset) from Kaggle. You need to download the dataset and arrange it as follows:
+
+```
+- images
+  - train
+    - anger
+    - disgust
+    - fear
+    - happiness
+    - sadness
+    - surprise
+    - neutral
+  - validation
+    - anger
+    - disgust
+    - fear
+    - happiness
+    - sadness
+    - surprise
+    - neutral
+```
+
+## Dependencies
+
+Make sure you have the following Python libraries installed:
+
+- TensorFlow
+- NumPy
+- Pandas
+- Seaborn
+- Matplotlib
+- Keras
+- scikit-learn (for splitting the dataset)
+
+You can install the required libraries using `pip`:
+
+```
+pip install tensorflow numpy pandas seaborn matplotlib scikit-learn
+```
+
+## Data Preprocessing
+
+1. Upload your Kaggle API JSON file (`kaggle.json`) for downloading the dataset.
+
+2. Install the Kaggle package and set up your Kaggle API credentials.
+
+3. Download and unzip the Face Expression Recognition Dataset.
+
+4. Preprocess the dataset and split it into training and validation sets.
+
+## Model Architecture
+
+The CNN model architecture consists of the following layers:
+
+- Convolutional layers with ReLU activation
+- Max-pooling layers
+- Dropout layers for regularization
+- Fully connected (dense) layers
+- Output layer with softmax activation
+
+## Training
+
+- Define the number of epochs and a ModelCheckpoint callback to save the best model during training.
+
+- Train the model using data augmentation for better generalization.
+
+## Evaluation
+
+- The model's performance is evaluated using accuracy and categorical cross-entropy loss.
+
+## Results
+
+- Training and validation accuracy/loss curves are plotted to visualize the model's performance.
+
+## Usage
+
+To train the model, simply run the code in a Python environment. You can adjust hyperparameters, such as batch size, data augmentation parameters, and the number of epochs to fine-tune the model.
+
+## Acknowledgments
+
+- [Face Expression Recognition Dataset](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset) by Jonathan Oheix on Kaggle.
+
+---
